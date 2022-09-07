@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
-
-<body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-</body>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function size() {
+                    let id = null;
+                    const elem = document.getElementById("brickOut");
+                    let pos = 0;
+                    clearInterval(id);
+                    id = setInterval(frame, 5);
+                    function frame() {
+                        if (pos == 500) {
+                            clearInterval(id);
+                        } else {
+                            console.log(1);
+                            pos += 2;
+                            elem.style.width = pos + "px";
+                            elem.style.width = pos + "px";
+                        }
+                    }
+                }
+        </script>
+    </head>
+    <body>
+        <h1>Logan Hiller</h1>
+        <h4>Student at York County School of Technology.</h4>
+        <h4>Created a Breakout game and helped with a project with classmates.</h4>
+        <img src="Breakout_Screenshot.png" alt="Breakout Game Screenshot" id="brickOut" class="center">
+        <button type="button" onclick="size()" class="center">animate</button>
+        <h4>1 717-698-0091</h4>
+    </body>
 
 </html>
