@@ -10,7 +10,7 @@
                     clearInterval(id);
                     id = setInterval(frame, 5);
                     function frame() {
-                        if (pos == 500) {
+                        if (pos == 520) {
                             clearInterval(id);
                         } else {
                             console.log(1);
@@ -19,16 +19,53 @@
                             elem.style.width = pos + "px";
                         }
                     }
+                    sizeTile()
+                }
+            function sizeTile() {
+                    for (tile in document.getElementsByClassName("brickOutTile")) {
+                        let id = null;
+                        const elem = document.getElementsByClassName("brickOutTile")[tile];
+                        let pos = 0;
+                        clearInterval(id);
+                        id = setInterval(frame, 15);
+                        function frame() {
+                            if (pos == 120) {
+                                clearInterval(id);
+                            } else {
+                                console.log(1);
+                                pos += 2;
+                                elem.style.width = pos + "px";
+                                elem.style.width = pos + "px";
+                            }
+                        }
+                    }
                 }
         </script>
     </head>
     <body>
-        <h1>Logan Hiller</h1>
-        <h4>Student at York County School of Technology.</h4>
-        <h4>Created a Breakout game and helped with a project with classmates.</h4>
+        <p class="words" id="title">Logan Hiller</p>
+        <p class="words">Student at York County School of Technology.</p>
+        <br>
+        <hr>
+        <p class="words heading">Accomplishments/Credentials</p>
+        <p class="words">Created a Breakout game and helped with a project with classmates.</p>
+        <p class="words">Received multiple Honor Rolls throughout the years</p>
+        <br>
+        <hr>
+        <p class="words heading">Goals</p>
+        <p class="words">I plan to receive a good grade at the end of the year and get a career where I can apply my experience to</p>
+
         <img src="Breakout_Screenshot.png" alt="Breakout Game Screenshot" id="brickOut" class="center">
-        <button type="button" onclick="size()" class="center">animate</button>
-        <h4>1 717-698-0091</h4>
+        <div class="center" id="div">
+            <img src="LV_1_Tile1.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+            <img src="LV_2_Tile2.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+            <img src="LV_3_Tile15.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+            <img src="Lv_4_Tile1.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+            <img src="Lv_5_Tile2.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+        </div>
+        <button type="button" onclick="size()" class="center words">animate</button>
+        <p class="words">Contacts</p>
+        <p class="words contacts">1 717-698-0091</p>
     </body>
 
 </html>
