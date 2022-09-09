@@ -5,7 +5,7 @@
         <script>
             function size() {
                     let id = null;
-                    const elem = document.getElementById("brickOut");
+                    const elem = document.getElementById("breakOut");
                     let pos = 0;
                     clearInterval(id);
                     id = setInterval(frame, 5);
@@ -20,16 +20,36 @@
                         }
                     }
                     sizeTile()
+                    sizeHonerRoll()
                 }
             function sizeTile() {
-                    for (tile in document.getElementsByClassName("brickOutTile")) {
+                    for (tile in document.getElementsByClassName("breakOutTile")) {
                         let id = null;
-                        const elem = document.getElementsByClassName("brickOutTile")[tile];
+                        const elem = document.getElementsByClassName("breakOutTile")[tile];
                         let pos = 0;
                         clearInterval(id);
                         id = setInterval(frame, 15);
                         function frame() {
                             if (pos == 120) {
+                                clearInterval(id);
+                            } else {
+                                console.log(1);
+                                pos += 2;
+                                elem.style.width = pos + "px";
+                                elem.style.width = pos + "px";
+                            }
+                        }
+                    }
+                }
+            function sizeHonerRoll() {
+                    for (tile in document.getElementsByClassName("honerRoll")) {
+                        let id = null;
+                        const elem = document.getElementsByClassName("honerRoll")[tile];
+                        let pos = 0;
+                        clearInterval(id);
+                        id = setInterval(frame, 15);
+                        function frame() {
+                            if (pos == 200) {
                                 clearInterval(id);
                             } else {
                                 console.log(1);
@@ -51,21 +71,31 @@
         <p class="words">Created a Breakout game and helped with a project with classmates.</p>
         <p class="words">Received multiple Honor Rolls throughout the years</p>
         <br>
+        <div class="center" id="honerRoll">
+            <img src="Distinguished_Honor_Roll_October_2020.jpg" alt="Distinguished Honor Roll Image" class="center honerRoll">
+            <img src="Honor_Roll_January_2021.jpg" alt="Honor Roll Image" class="center honerRoll">
+            <img src="Honor_Roll_April_2021.jpg" alt="Honor Roll Image" class="center honerRoll">
+        </div>
+        <br>
         <hr>
         <p class="words heading">Goals</p>
-        <p class="words">I plan to receive a good grade at the end of the year and get a career where I can apply my experience to</p>
-
-        <img src="Breakout_Screenshot.png" alt="Breakout Game Screenshot" id="brickOut" class="center">
-        <div class="center" id="div">
-            <img src="LV_1_Tile1.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
-            <img src="LV_2_Tile2.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
-            <img src="LV_3_Tile15.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
-            <img src="Lv_4_Tile1.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
-            <img src="Lv_5_Tile2.png" alt="Breakout Game Screenshot" class="brickOutTile" class="center">
+        <p class="words">I plan to receive a good grade at the end of the year and<br>get a career where I can apply my experience to.</p>
+        <div>
+            <img src="Breakout_Screenshot.png" alt="Breakout Game Screenshot" id="breakOut" class="center">
         </div>
+        <br>
+        <div class="center" id="tiles">
+            <img src="LV_1_Tile1.png" alt="Breakout Game Screenshot" class="breakOutTile resize" class="center">
+            <img src="LV_2_Tile2. png" alt="Breakout Game Screenshot" class="breakOutTile resize" class="center">
+            <img src="LV_3_Tile15.png" alt="Breakout Game Screenshot" class="breakOutTile resize" class="center">
+            <img src="Lv_4_Tile1.png" alt="Breakout Game Screenshot" class="breakOutTile resize" class="center">
+            <img src="Lv_5_Tile2.png" alt="Breakout Game Screenshot" class="breakOutTile resize" class="center">
+        </div>
+        <br>
         <button type="button" onclick="size()" class="center words">animate</button>
         <p class="words">Contacts</p>
         <p class="words contacts">1 717-698-0091</p>
+        <p id="filler"></p>
     </body>
 
 </html>

@@ -1,5 +1,7 @@
 html {
-    height: 130%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: linear-gradient(#A168F9, #1c1cab);
 }
 .words {
@@ -33,12 +35,22 @@ button {
     border-width: 2px;
     border-radius: 10px;
 }
-#div {
+hr {
+    width: 30%;
+}
+#tiles {
     margin-left: 33%;
     width: 50%;
 }
+#honerRoll {
+    margin-left: 25%;
+    width: 50%;
+}
 .center {
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
+}
+#filler {
+    height: 83px;
 }
